@@ -10,8 +10,12 @@ namespace DataLayer
 {
     public class RestClientUpdate
     {
-        public async void ObjectUpdate()
+        public async void ObjectUpdate(string id)
         {
+
+            RestClientGet restGet = new RestClientGet();
+            var personReturned = await  restGet.GetObject(id);
+
             using (var db = new MyCouchClient("http://localhost:5984", "cars"))
             {
 
@@ -24,14 +28,14 @@ namespace DataLayer
 
                 var person = new Person()
                 {
-                    _id = "5f9af3224b90c15568d982b820000562",
-                    _rev = "1-4f60388fb425e1b400da11815d2321ed",
+                    _id = personReturned._id,
+                    _rev = personReturned._rev,
                     name = "gerard",
                     age = "37",
                     characteristics = personchar,
                     personcar = new Car
                     {
-                        make = "toyota MR2",
+                        make = "Toyota Levin",
                         engineSize = 2.0,
                         fuelType = "Diesel"
                     }

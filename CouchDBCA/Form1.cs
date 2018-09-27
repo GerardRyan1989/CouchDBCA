@@ -20,15 +20,11 @@ namespace CouchDBCA
 
         private async void btnGo_Click(object sender, EventArgs e)
         {
-            //RestClient restClient = new RestClient();
-            //restClient.endPoint = txtURL.Text;
-            //debugOutput("rest Client Created");
+          
 
-            //string strResponse = string.Empty;
+            
 
-            //strResponse = restClient.makeRequest();
-
-            //debugOutput(strResponse);
+        
             //RestClientPost rest = new RestClientPost();
 
             //rest.postObject();
@@ -44,7 +40,7 @@ namespace CouchDBCA
 
             RestClientUpdate restUpdate = new RestClientUpdate();
 
-            restUpdate.ObjectUpdate();
+            restUpdate.ObjectUpdate("95-c-18337");
         }
 
         public void debugOutput(string strDebugText)

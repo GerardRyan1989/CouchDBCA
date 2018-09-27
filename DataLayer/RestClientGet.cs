@@ -10,20 +10,12 @@ namespace DataLayer
 {
     public class RestClientGet
     {
-        public async Task<Person> GetObject()
+        public async Task<Person> GetObject(string id)
         {
             using (var db = new MyCouchStore("http://localhost:5984", "cars"))
             {
-                var person = new Person()
-                {
-                    name = "ger",
-                    age = "28"
-                };
-
-
-                var response = await db.GetByIdAsync<Person>("5f9af3224b90c15568d982b820000562");
-
-                Console.Write(response.ToString());
+               
+                var response = await db.GetByIdAsync<Person>(id);
 
                 return response;
 

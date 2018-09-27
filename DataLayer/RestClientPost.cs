@@ -26,6 +26,7 @@ namespace DataLayer
 
                 var person = new Person()
                 {
+                    _id = "95-c-18337",
                     name = "ger",
                     age = "28",
                     characteristics = personchar,
