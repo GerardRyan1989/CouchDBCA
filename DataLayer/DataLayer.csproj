@@ -53,7 +53,6 @@
   <ItemGroup>
     <Compile Include="Car.cs" />
     <Compile Include="Person.cs" />
-    <Compile Include="RestClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RestClientDelete.cs" />
     <Compile Include="RestClientGet.cs" />

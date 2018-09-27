@@ -9,6 +9,7 @@ namespace CouchDBCA
 {
     public class Person
     {
+
         [JsonProperty("name")]
         public string name { get; set; }
 
