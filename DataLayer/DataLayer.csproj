@@ -57,6 +57,7 @@
     <Compile Include="RestClientDelete.cs" />
     <Compile Include="RestClientGet.cs" />
     <Compile Include="RestClientPost.cs" />
+    <Compile Include="RestClientUpdate.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">

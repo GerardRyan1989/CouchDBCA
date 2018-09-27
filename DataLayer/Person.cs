@@ -9,6 +9,11 @@ namespace CouchDBCA
 {
     public class Person
     {
+        [JsonProperty("_id")]
+        public string _id { get; set; }
+
+        [JsonProperty("_rev")]
+        public string _rev { get; set;}
 
         [JsonProperty("name")]
         public string name { get; set; }
@@ -23,7 +28,7 @@ namespace CouchDBCA
         [JsonProperty("personCar")]
         public Car personcar { get; set; }
 
-        //[JsonProperty("")]
+        
         //[JsonProperty("")]
         //[JsonProperty("")]
         //[JsonProperty("")]

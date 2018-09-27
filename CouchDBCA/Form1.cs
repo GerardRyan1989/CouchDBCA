@@ -36,11 +36,15 @@ namespace CouchDBCA
 
             RestClientGet restGet = new RestClientGet();
 
-            await restGet.GetObject();
+            //await restGet.GetObject();
 
             //RestClientDelete restDelete = new RestClientDelete();
 
             //restDelete.DeleteObject();
+
+            RestClientUpdate restUpdate = new RestClientUpdate();
+
+            restUpdate.ObjectUpdate();
         }
 
         public void debugOutput(string strDebugText)
