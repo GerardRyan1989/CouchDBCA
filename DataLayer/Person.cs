@@ -34,6 +34,11 @@ namespace CouchDBCA
         //[JsonProperty("")]
 
 
+        public void checkIfGithubLinked()
+        {
+            Console.Write("github");
+        }
+
 
     }
 }
