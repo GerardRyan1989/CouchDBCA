@@ -25,9 +25,9 @@ namespace CouchDBCA
             
 
         
-            //RestClientPost rest = new RestClientPost();
+            RestClientPost rest = new RestClientPost();
 
-            //rest.postObject();
+            rest.postObject();
 
 
             RestClientGet restGet = new RestClientGet();
@@ -40,7 +40,7 @@ namespace CouchDBCA
 
             RestClientUpdate restUpdate = new RestClientUpdate();
 
-            restUpdate.ObjectUpdate("95-c-18337");
+            //restUpdate.ObjectUpdate("95-c-18337");
         }
 
         public void debugOutput(string strDebugText)
