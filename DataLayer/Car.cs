@@ -21,6 +21,9 @@ namespace CouchDBCA
         [JsonProperty("Engine Size")]
         public double EngineSize { get; set; }
 
+        [JsonProperty("Fuel Type")]
+        public string FuelType { get; set; }
+
         [JsonProperty("Transmission")]
         public string Transmission { get; set; }
 
