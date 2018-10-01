@@ -36,6 +36,9 @@ namespace CouchDBCA
         [JsonProperty("Number of Previous Owners")]
         public int numofOwners { get; set; }
 
+        [JsonProperty("Mileage")]
+        public int mileage { get; set; }
+
         [JsonProperty("Previous Owner")]
         public PreviousOwners PrevOwner { get; set; }
 

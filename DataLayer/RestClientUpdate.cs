@@ -11,43 +11,15 @@ namespace DataLayer
 {
     public class RestClientUpdate
     {
-        public async void ObjectUpdate(string id)
+        public async void ObjectUpdate(Car car)
         {
-
-        //  RestClientGet restGet = new RestClientGet();
-        //  var personReturned = await  restGet.GetObject(id);
-        //
-        //  using (var db = new MyCouchClient("http://localhost:5984", "cars"))
-        //  {
-        //
-        //      List<string> personchar = new List<string>();
-        //      personchar.Add("Happy/Sad");
-        //      personchar.Add("Tall/Small");
-        //      personchar.Add("Skinny/Fat");
-        //      personchar.Add("Random/Chronalogical");
-        //
-        //
-        //      var person = new Person()
-        //      {
-        //          _id = personReturned._id,
-        //          _rev = personReturned._rev,
-        //          name = "gerard",
-        //          age = "37",
-        //          characteristics = personchar,
-        //          personcar = new Car
-        //          {
-        //              make = "Toyota Levin",
-        //              engineSize = 2.0,
-        //              fuelType = "Diesel"
-        //          }
-        //
-        //      };
-        //
-        //      var response = await db.Entities.PutAsync(person);
-        //
-        //      Console.Write(response.ToString());
-        //
-        //   }
+         
+          using (var db = new MyCouchClient("http://localhost:5984", "cars"))
+          {      
+              var response = await db.Entities.PutAsync(car);
+        
+              Console.Write(response.ToString());     
+           }
         }
     }
 }

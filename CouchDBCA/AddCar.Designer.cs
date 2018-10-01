@@ -31,7 +31,6 @@
             this.txtRegistration = new System.Windows.Forms.TextBox();
             this.btnAddCar = new System.Windows.Forms.Button();
             this.lblRegistration = new System.Windows.Forms.Label();
-            this.txtExtras = new System.Windows.Forms.TextBox();
             this.txtYearsOwned = new System.Windows.Forms.TextBox();
             this.txtPreviousOwnerAddress = new System.Windows.Forms.TextBox();
             this.txtTransmission = new System.Windows.Forms.TextBox();
@@ -43,6 +42,15 @@
             this.txtNumOfOwners = new System.Windows.Forms.TextBox();
             this.txtPreviousOwnerName = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboExtras = new System.Windows.Forms.ComboBox();
+            this.txtFuelType = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtMileage = new System.Windows.Forms.TextBox();
+            this.txtSafetyRating = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,17 +62,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dtpServiceDate = new System.Windows.Forms.DateTimePicker();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtSafetyRating = new System.Windows.Forms.TextBox();
-            this.txtMileage = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtFuelType = new System.Windows.Forms.TextBox();
             this.btnAddService = new System.Windows.Forms.Button();
+            this.dtpServiceDate = new System.Windows.Forms.DateTimePicker();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -97,14 +97,6 @@
             this.lblRegistration.Size = new System.Drawing.Size(219, 31);
             this.lblRegistration.TabIndex = 3;
             this.lblRegistration.Text = "Car Registration:";
-            // 
-            // txtExtras
-            // 
-            this.txtExtras.Location = new System.Drawing.Point(280, 544);
-            this.txtExtras.Multiline = true;
-            this.txtExtras.Name = "txtExtras";
-            this.txtExtras.Size = new System.Drawing.Size(398, 50);
-            this.txtExtras.TabIndex = 4;
             // 
             // txtYearsOwned
             // 
@@ -188,6 +180,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cboExtras);
             this.groupBox1.Controls.Add(this.txtFuelType);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.label11);
@@ -201,7 +194,6 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtRegistration);
             this.groupBox1.Controls.Add(this.lblRegistration);
-            this.groupBox1.Controls.Add(this.txtExtras);
             this.groupBox1.Controls.Add(this.txtMake);
             this.groupBox1.Controls.Add(this.txtTransmission);
             this.groupBox1.Controls.Add(this.txtModel);
@@ -212,6 +204,92 @@
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Car Details";
+            // 
+            // cboExtras
+            // 
+            this.cboExtras.DropDownHeight = 150;
+            this.cboExtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboExtras.FormattingEnabled = true;
+            this.cboExtras.IntegralHeight = false;
+            this.cboExtras.ItemHeight = 33;
+            this.cboExtras.Location = new System.Drawing.Point(280, 546);
+            this.cboExtras.Name = "cboExtras";
+            this.cboExtras.Size = new System.Drawing.Size(398, 41);
+            this.cboExtras.TabIndex = 43;
+            // 
+            // txtFuelType
+            // 
+            this.txtFuelType.Location = new System.Drawing.Point(281, 391);
+            this.txtFuelType.Multiline = true;
+            this.txtFuelType.Name = "txtFuelType";
+            this.txtFuelType.Size = new System.Drawing.Size(398, 50);
+            this.txtFuelType.TabIndex = 41;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(29, 400);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(143, 31);
+            this.label15.TabIndex = 40;
+            this.label15.Text = "Fuel Type:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(40, 736);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(116, 31);
+            this.label11.TabIndex = 39;
+            this.label11.Text = "Mileage:";
+            // 
+            // txtMileage
+            // 
+            this.txtMileage.Location = new System.Drawing.Point(281, 726);
+            this.txtMileage.Multiline = true;
+            this.txtMileage.Name = "txtMileage";
+            this.txtMileage.Size = new System.Drawing.Size(398, 50);
+            this.txtMileage.TabIndex = 38;
+            // 
+            // txtSafetyRating
+            // 
+            this.txtSafetyRating.Location = new System.Drawing.Point(281, 632);
+            this.txtSafetyRating.Multiline = true;
+            this.txtSafetyRating.Name = "txtSafetyRating";
+            this.txtSafetyRating.Size = new System.Drawing.Size(398, 50);
+            this.txtSafetyRating.TabIndex = 37;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(29, 473);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(184, 31);
+            this.label14.TabIndex = 36;
+            this.label14.Text = "Transmission:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(29, 544);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(99, 31);
+            this.label13.TabIndex = 35;
+            this.label13.Text = "Extras:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(29, 632);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(186, 31);
+            this.label12.TabIndex = 34;
+            this.label12.Text = "Safety Rating:";
             // 
             // label10
             // 
@@ -329,6 +407,23 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Service History";
             // 
+            // btnAddService
+            // 
+            this.btnAddService.Location = new System.Drawing.Point(286, 351);
+            this.btnAddService.Name = "btnAddService";
+            this.btnAddService.Size = new System.Drawing.Size(278, 52);
+            this.btnAddService.TabIndex = 33;
+            this.btnAddService.Text = "Add Service";
+            this.btnAddService.UseVisualStyleBackColor = true;
+            this.btnAddService.Click += new System.EventHandler(this.btnAddService_Click);
+            // 
+            // dtpServiceDate
+            // 
+            this.dtpServiceDate.Location = new System.Drawing.Point(286, 235);
+            this.dtpServiceDate.Name = "dtpServiceDate";
+            this.dtpServiceDate.Size = new System.Drawing.Size(398, 31);
+            this.dtpServiceDate.TabIndex = 32;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label6);
@@ -345,97 +440,6 @@
             this.groupBox3.TabIndex = 25;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Previous Owner Details";
-            // 
-            // dtpServiceDate
-            // 
-            this.dtpServiceDate.Location = new System.Drawing.Point(286, 235);
-            this.dtpServiceDate.Name = "dtpServiceDate";
-            this.dtpServiceDate.Size = new System.Drawing.Size(398, 31);
-            this.dtpServiceDate.TabIndex = 32;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(29, 632);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(186, 31);
-            this.label12.TabIndex = 34;
-            this.label12.Text = "Safety Rating:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(29, 544);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(99, 31);
-            this.label13.TabIndex = 35;
-            this.label13.Text = "Extras:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(29, 473);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(184, 31);
-            this.label14.TabIndex = 36;
-            this.label14.Text = "Transmission:";
-            // 
-            // txtSafetyRating
-            // 
-            this.txtSafetyRating.Location = new System.Drawing.Point(281, 632);
-            this.txtSafetyRating.Multiline = true;
-            this.txtSafetyRating.Name = "txtSafetyRating";
-            this.txtSafetyRating.Size = new System.Drawing.Size(398, 50);
-            this.txtSafetyRating.TabIndex = 37;
-            // 
-            // txtMileage
-            // 
-            this.txtMileage.Location = new System.Drawing.Point(281, 726);
-            this.txtMileage.Multiline = true;
-            this.txtMileage.Name = "txtMileage";
-            this.txtMileage.Size = new System.Drawing.Size(398, 50);
-            this.txtMileage.TabIndex = 38;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(40, 736);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(116, 31);
-            this.label11.TabIndex = 39;
-            this.label11.Text = "Mileage:";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(29, 400);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(143, 31);
-            this.label15.TabIndex = 40;
-            this.label15.Text = "Fuel Type:";
-            // 
-            // txtFuelType
-            // 
-            this.txtFuelType.Location = new System.Drawing.Point(281, 391);
-            this.txtFuelType.Multiline = true;
-            this.txtFuelType.Name = "txtFuelType";
-            this.txtFuelType.Size = new System.Drawing.Size(398, 50);
-            this.txtFuelType.TabIndex = 41;
-            // 
-            // btnAddService
-            // 
-            this.btnAddService.Location = new System.Drawing.Point(286, 351);
-            this.btnAddService.Name = "btnAddService";
-            this.btnAddService.Size = new System.Drawing.Size(278, 52);
-            this.btnAddService.TabIndex = 33;
-            this.btnAddService.Text = "Add Service";
-            this.btnAddService.UseVisualStyleBackColor = true;
-            this.btnAddService.Click += new System.EventHandler(this.btnAddService_Click);
             // 
             // AddCar
             // 
@@ -465,7 +469,6 @@
         private System.Windows.Forms.TextBox txtRegistration;
         private System.Windows.Forms.Button btnAddCar;
         private System.Windows.Forms.Label lblRegistration;
-        private System.Windows.Forms.TextBox txtExtras;
         private System.Windows.Forms.TextBox txtYearsOwned;
         private System.Windows.Forms.TextBox txtPreviousOwnerAddress;
         private System.Windows.Forms.TextBox txtTransmission;
@@ -499,6 +502,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtMileage;
         private System.Windows.Forms.Button btnAddService;
+        private System.Windows.Forms.ComboBox cboExtras;
     }
 }
 

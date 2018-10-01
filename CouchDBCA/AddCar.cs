@@ -19,12 +19,18 @@ namespace CouchDBCA
         public AddCar()
         {
             InitializeComponent();
+            cboExtras.Items.Add("Air Con, Leather Seats");
+            cboExtras.Items.Add("Air Con, Alloy wheels");
+            cboExtras.Items.Add("Air Con, Alloy Wheels, Leather seats");
+            cboExtras.Items.Add("Alloy Wheels");
+            cboExtras.Items.Add("Leather Seats");
+            cboExtras.Items.Add("Air Con");
+
         }
 
         private void btnAddCar_Click(object sender, EventArgs e)
         {
             List<string> carExtras = new List<string>();
-            carExtras.Add(txtExtras.Text);
 
 
             Car car = new Car
@@ -38,8 +44,13 @@ namespace CouchDBCA
                 Transmission =txtTransmission.Text,
                 ServHistory = servHistory,
                 SafetyRating = Convert.ToInt16(txtSafetyRating.Text),
-                numofOwners= Convert.ToInt16(txtNumOfOwners.Text)
-
+                numofOwners= Convert.ToInt16(txtNumOfOwners.Text),
+                PrevOwner = new PreviousOwners
+                {
+                    Name = txtPreviousOwnerName.Text,
+                    Address = txtPreviousOwnerAddress.Text,
+                    YearsOwned = Convert.ToInt16(txtYearsOwned.Text)
+                }
             };
 
             RestClientPost rest = new RestClientPost();
@@ -62,5 +73,7 @@ namespace CouchDBCA
             txtMilesServicedAt.Text = "";
             dtpServiceDate.ResetText();
         }
+
+        
     }
 }

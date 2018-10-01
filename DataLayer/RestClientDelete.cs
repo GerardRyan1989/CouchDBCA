@@ -10,12 +10,12 @@ namespace DataLayer
 {
     public class RestClientDelete
     {
-        public async void DeleteObject()
+        public async void DeleteObject(string _id, string _rev)
         {
             using (var db = new MyCouchStore("http://localhost:5984", "cars"))
             {
                 
-                var response = await db.DeleteAsync("a418b1458d77af73308717839f004ff8", "3-f8306ce81e7fdae544561221f9e49e01");
+                var response = await db.DeleteAsync(_id , _rev);
 
                 Console.Write(response.ToString());
 
