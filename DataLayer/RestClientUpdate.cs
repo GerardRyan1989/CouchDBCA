@@ -1,11 +1,6 @@
 ﻿using CouchDBCA;
 using MyCouch;
 using System;
-using System.Collections.Generic;
-using DataLayer;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataLayer
 {
