@@ -16,7 +16,7 @@ namespace CouchDBCA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RemoveCar());
+            Application.Run(new UpdateCar());
         }
     }
 }

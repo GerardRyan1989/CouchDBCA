@@ -1,6 +1,7 @@
 ﻿using DataLayer;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace CouchDBCA
@@ -13,6 +14,7 @@ namespace CouchDBCA
         public UpdateCar()
         {
             InitializeComponent();
+            this.Size = new Size(1000, 820);
             cboExtras.Items.Add("Air Con, Leather Seats");
             cboExtras.Items.Add("Air Con, Alloy wheels");
             cboExtras.Items.Add("Air Con, Alloy Wheels, Leather seats");
@@ -81,24 +83,6 @@ namespace CouchDBCA
             restUpdate.ObjectUpdate(car);
         }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox4_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

@@ -78,7 +78,7 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Search for Car";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+           
             // 
             // label1
             // 
@@ -124,7 +124,7 @@
             this.groupBox3.TabIndex = 27;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Previous Owner Details";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
+     
             // 
             // label6
             // 
@@ -224,7 +224,7 @@
             this.groupBox2.TabIndex = 26;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Car Details";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+        
             // 
             // txtFuelType
             // 
@@ -400,7 +400,7 @@
             this.groupBox4.TabIndex = 28;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Service";
-            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
+            
             // 
             // btnUpdateCar
             // 
@@ -417,13 +417,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(1857, 1475);
+            this.ClientSize = new System.Drawing.Size(2474, 1759);
             this.Controls.Add(this.btnUpdateCar);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Name = "UpdateCar";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "UpdateCar";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

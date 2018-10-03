@@ -17,7 +17,8 @@ namespace CouchDBCA
 
         public RemoveCar()
         {
-            InitializeComponent();      
+            InitializeComponent();
+            this.Size = new Size(1000, 820);
         }
 
         private void btnRemoveCar_Click(object sender, EventArgs e)

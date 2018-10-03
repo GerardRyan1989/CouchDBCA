@@ -19,6 +19,7 @@ namespace CouchDBCA
         public AddCar()
         {
             InitializeComponent();
+            this.Size = new Size(1000, 820);
             cboExtras.Items.Add("Air Con, Leather Seats");
             cboExtras.Items.Add("Air Con, Alloy wheels");
             cboExtras.Items.Add("Air Con, Alloy Wheels, Leather seats");
