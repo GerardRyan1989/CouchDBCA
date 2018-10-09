@@ -22,11 +22,17 @@ namespace CouchDBCA
             cboExtras.Items.Add("Leather Seats");
             cboExtras.Items.Add("Air Con");
 
+            
+
         }
 
         private void btnAddCar_Click(object sender, EventArgs e)
         {
             List<string> carExtras = new List<string>();
+            carExtras.Add("Leather Seats");
+            carExtras.Add("Alloy Wheels");
+            carExtras.Add("Air Con");
+          
 
 
             Car car = new Car
@@ -41,6 +47,7 @@ namespace CouchDBCA
                 ServHistory = servHistory,
                 SafetyRating = Convert.ToInt16(txtSafetyRating.Text),
                 numofOwners= Convert.ToInt16(txtNumOfOwners.Text),
+                SalesPrices = 21000,
                 PrevOwner = new PreviousOwners
                 {
                     Name = txtPreviousOwnerName.Text,

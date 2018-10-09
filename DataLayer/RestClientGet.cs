@@ -11,27 +11,11 @@ namespace DataLayer
         {
             using (var db = new MyCouchStore("http://localhost:5984", "cars"))
             {
-           
-            var response = await db.GetByIdAsync<Car>(id);
+                var response = await db.GetByIdAsync<Car>(id);
     
-            return response;
-    
+                return response;
             }
         }
-
-
-    public async Task<Car> carSearch(string make, string model)
-    {
-            using(var db = new MyCouchStore("http://localhost:5984", "cars"))
-            {
-          
-                var response = await db.GetByIdAsync<Car>(model);
-   
-                return response;
-   
-            }
-
-     }
     }
 
     

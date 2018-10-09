@@ -58,6 +58,7 @@
     <Compile Include="RestClientGet.cs" />
     <Compile Include="RestClientPost.cs" />
     <Compile Include="RestClientUpdate.cs" />
+    <Compile Include="RestClientView.cs" />
     <Compile Include="ServiceHistory.cs" />
   </ItemGroup>
   <ItemGroup>

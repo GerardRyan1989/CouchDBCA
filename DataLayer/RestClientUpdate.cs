@@ -12,9 +12,8 @@ namespace DataLayer
           using (var db = new MyCouchClient("http://localhost:5984", "cars"))
           {      
               var response = await db.Entities.PutAsync(car);
-        
-              Console.Write(response.ToString());     
-           }
+           
+          }
         }
     }
 }

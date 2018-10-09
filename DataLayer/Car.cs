@@ -18,10 +18,10 @@ namespace CouchDBCA
         [JsonProperty("Model")]
         public string Model { get; set; }
 
-        [JsonProperty("Engine Size")]
+        [JsonProperty("EngineSize")]
         public double EngineSize { get; set; }
 
-        [JsonProperty("Fuel Type")]
+        [JsonProperty("FuelType")]
         public string FuelType { get; set; }
 
         [JsonProperty("Transmission")]
@@ -30,19 +30,22 @@ namespace CouchDBCA
         [JsonProperty("Extras")]
         public List<string> Extras { get; set; }
 
-        [JsonProperty("Safety Rating")]
+        [JsonProperty("SafetyRating")]
         public int SafetyRating { get; set; }
 
-        [JsonProperty("Number of Previous Owners")]
+        [JsonProperty("SalesPrice")]
+        public int SalesPrices { get; set; }
+
+        [JsonProperty("NumberOfPreviousOwners")]
         public int numofOwners { get; set; }
 
         [JsonProperty("Mileage")]
         public int mileage { get; set; }
 
-        [JsonProperty("Previous Owner")]
+        [JsonProperty("PreviousOwner")]
         public PreviousOwners PrevOwner { get; set; }
 
-        [JsonProperty("Service History")]
+        [JsonProperty("ServiceHistory")]
         public List<ServiceHistory> ServHistory{get; set;}
 
     }
