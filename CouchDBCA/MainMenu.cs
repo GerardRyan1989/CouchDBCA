@@ -32,5 +32,12 @@ namespace CouchDBCA
 
             addCar.Visible = true;
         }
+
+        private void searchByMakeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MapReduce map = new MapReduce();
+
+            map.Visible = true;
+        }
     }
 }

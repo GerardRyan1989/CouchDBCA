@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +17,13 @@ namespace CouchDBCA
         {
             InitializeComponent();
         }
+
+        private async void btnSearch_Click(object sender, EventArgs e)
+        {
+            RestClientView view = new RestClientView();
+            string make = txtMake.Text;
+            string model = txtModel.Text;
+            await view.getView(make,model);
+        }   
     }
 }

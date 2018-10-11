@@ -9,13 +9,13 @@ namespace DataLayer
 {
     public class PreviousOwners
     {
-        [JsonProperty("Name")]
+        [JsonProperty("name")]
         public string Name { get; set; }
 
-        [JsonProperty("Address")]
+        [JsonProperty("address")]
         public string Address { get; set; }
 
-        [JsonProperty("Years Owned")]
+        [JsonProperty("yearsOwned")]
         public int YearsOwned { get; set; }
     }
 }

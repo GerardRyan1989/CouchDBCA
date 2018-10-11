@@ -5,13 +5,13 @@ namespace DataLayer
 {
     public class ServiceHistory
     {
-        [JsonProperty("Garage Name")]
+        [JsonProperty("garageName")]
         public string GarageName { get; set; }
 
-        [JsonProperty("Miles Service At")]
+        [JsonProperty("milesServiceAt")]
         public int MilesServicedAt { get; set; }
 
-        [JsonProperty("Date Serviced")]
+        [JsonProperty("dateServiced")]
         public DateTime ServiceDate { get; set; }
 
 

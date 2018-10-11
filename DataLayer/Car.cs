@@ -12,40 +12,40 @@ namespace CouchDBCA
         [JsonProperty("_rev")]
         public string _rev { get; set; }
 
-        [JsonProperty("Make")]
+        [JsonProperty("make")]
         public string Make { get; set; }
 
-        [JsonProperty("Model")]
+        [JsonProperty("model")]
         public string Model { get; set; }
 
-        [JsonProperty("EngineSize")]
+        [JsonProperty("engineSize")]
         public double EngineSize { get; set; }
 
-        [JsonProperty("FuelType")]
+        [JsonProperty("fuelType")]
         public string FuelType { get; set; }
 
-        [JsonProperty("Transmission")]
+        [JsonProperty("transmission")]
         public string Transmission { get; set; }
 
-        [JsonProperty("Extras")]
+        [JsonProperty("extras")]
         public List<string> Extras { get; set; }
 
-        [JsonProperty("SafetyRating")]
+        [JsonProperty("safetyRating")]
         public int SafetyRating { get; set; }
 
-        [JsonProperty("SalesPrice")]
+        [JsonProperty("salesPrice")]
         public int SalesPrices { get; set; }
 
-        [JsonProperty("NumberOfPreviousOwners")]
+        [JsonProperty("numberOfPreviousOwners")]
         public int numofOwners { get; set; }
 
-        [JsonProperty("Mileage")]
+        [JsonProperty("mileage")]
         public int mileage { get; set; }
 
-        [JsonProperty("PreviousOwner")]
+        [JsonProperty("previousOwner")]
         public PreviousOwners PrevOwner { get; set; }
 
-        [JsonProperty("ServiceHistory")]
+        [JsonProperty("serviceHistory")]
         public List<ServiceHistory> ServHistory{get; set;}
     }
 }
