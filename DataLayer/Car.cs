@@ -47,6 +47,5 @@ namespace CouchDBCA
 
         [JsonProperty("ServiceHistory")]
         public List<ServiceHistory> ServHistory{get; set;}
-
     }
 }

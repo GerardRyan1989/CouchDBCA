@@ -12,11 +12,9 @@ namespace DataLayer
         public async Task<ViewQueryResponse<Car[]>> getView()
         {
             ViewQueryResponse<Car[]> result;
-#
             using (var db = new MyCouchClient("http://localhost:5984", "cars"))
             {
                 var query = new QueryViewRequest("carViews", "byMake").Configure(querie => querie
-               .Limit(5)
                .Reduce(false));
 
                 result = await db.Views.QueryAsync<Car[]>(query);
