@@ -9,13 +9,13 @@ namespace DataLayer
         public string GarageName { get; set; }
 
         [JsonProperty("milesServiceAt")]
-        public int MilesServicedAt { get; set; }
+        public string MilesServicedAt { get; set; }
 
         [JsonProperty("dateServiced")]
         public DateTime ServiceDate { get; set; }
 
 
-        public ServiceHistory(string gar, int miles, DateTime serv)
+        public ServiceHistory(string gar, string miles, DateTime serv)
         {
             this.GarageName = gar;
             this.MilesServicedAt = miles;

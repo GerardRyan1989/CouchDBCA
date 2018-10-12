@@ -35,5 +35,8 @@ namespace CouchDBCA
             MapReduce map = new MapReduce();
             map.Visible = true;
         }
+
+      
+        
     }
 }

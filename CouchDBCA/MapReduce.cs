@@ -26,14 +26,24 @@ namespace CouchDBCA
             string model = txtModel.Text;
             List<Car> cars = new List<Car>();
  
+
             var returnedCars = await view.getView(make,model);
 
-            foreach(Car car in returnedCars){
-                cars.Add(car);
-            }
+            if(returnedCars.Count > 0)
+            {
+                foreach (Car car in returnedCars)
+                {
+                    cars.Add(car);
+                }
 
-            dataGrid.DataSource = cars;
-            dataGrid.AutoResizeColumns();
+                dataGrid.DataSource = cars;
+                dataGrid.AutoResizeColumns();
+            }
+            else
+            {
+                MessageBox.Show("No matching cars could be found!");
+            }
+           
         }   
     }
 }

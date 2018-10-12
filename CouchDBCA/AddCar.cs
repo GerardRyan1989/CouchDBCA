@@ -14,60 +14,94 @@ namespace CouchDBCA
         public AddCar()
         {
             InitializeComponent();
-            this.Size = new Size(1000, 820);
+            this.Size = new Size(900, 700);
             cboExtras.Items.Add("Air Con, Leather Seats");
             cboExtras.Items.Add("Air Con, Alloy wheels");
-            cboExtras.Items.Add("Air Con, Alloy Wheels, Leather seats");
+            cboExtras.Items.Add("Air Con, Alloy Wheels, Leather Seats");
             cboExtras.Items.Add("Alloy Wheels");
             cboExtras.Items.Add("Leather Seats");
             cboExtras.Items.Add("Air Con");
-
-            
-
         }
 
         private void btnAddCar_Click(object sender, EventArgs e)
         {
-            List<string> carExtras = new List<string>();
-            carExtras.Add("Leather Seats");
-            carExtras.Add("Alloy Wheels");
-            carExtras.Add("Air Con");
-          
+            List<string> extrasList = new List<string>();
+            Car car;
 
-
-            Car car = new Car
+            if (cboExtras.SelectedItem != null)
             {
-                _id = txtRegistration.Text,
-                Make = txtMake.Text,
-                Model = txtModel.Text,
-                EngineSize = Convert.ToDouble(txtEngineSize.Text),
-                FuelType = txtFuelType.Text,
-                Extras = carExtras,
-                Transmission =txtTransmission.Text,
-                ServHistory = servHistory,
-                SafetyRating = Convert.ToInt16(txtSafetyRating.Text),
-                numofOwners= Convert.ToInt16(txtNumOfOwners.Text),
-                SalesPrices = 21000,
-                PrevOwner = new PreviousOwners
+                switch (cboExtras.SelectedItem.ToString())
                 {
-                    Name = txtPreviousOwnerName.Text,
-                    Address = txtPreviousOwnerAddress.Text,
-                    YearsOwned = Convert.ToInt16(txtYearsOwned.Text)
+                    case "Air Con, Leather Seats":
+                        extrasList.Add("Air Con");
+                        extrasList.Add("Leather Seats");
+                        break;
+                    case "Air Con, Alloy Wheels":
+                        extrasList.Add("Air Con");
+                        extrasList.Add("Alloy Wheels");
+                        break;
+                    case "Air Con, Alloy Wheels, Leather Seats":
+                        extrasList.Add("Air Con");
+                        extrasList.Add("Alloy Wheels");
+                        extrasList.Add("Leather Seats");
+                        break;
+                    case "Air Con":
+                        extrasList.Add("Air Con");
+                        break;
+                    case "Alloy Wheels":
+                        extrasList.Add("Alloy Wheels");
+                        break;
+                    case "Leather Seats":
+                        extrasList.Add("Leather Seats");
+                        break;
                 }
-            };
 
-            RestClientPost rest = new RestClientPost();
-            rest.postObject(car);
-            servHistory.Clear();
-            carExtras.Clear();
-         
+                try
+                {
+                    car = new Car
+                    {
+                        _id = txtRegistration.Text.ToUpper(),
+                        Make = txtMake.Text.ToUpper(),
+                        Model = txtModel.Text.ToUpper(),
+                        EngineSize = Convert.ToDouble(txtEngineSize.Text),
+                        FuelType = txtFuelType.Text.ToUpper(),
+                        Extras = extrasList,
+                        Transmission = txtTransmission.Text.ToUpper(),
+                        ServHistory = servHistory,
+                        SafetyRating = Convert.ToInt32(txtSafetyRating.Text),
+                        numofOwners = Convert.ToInt32(txtNumOfOwners.Text),
+                        SalesPrices = Convert.ToInt32(txtSalesPrice.Text),
+                        mileage = Convert.ToInt16(txtMileage.Text),
+                        PrevOwner = new PreviousOwners
+                        {
+                            Name = txtPreviousOwnerName.Text.ToUpper(),
+                            Address = txtPreviousOwnerAddress.Text.ToUpper(),
+                            YearsOwned = Convert.ToInt16(txtYearsOwned.Text)
+                        }
+                    };
+
+                    RestClientPost rest = new RestClientPost();
+                    rest.postObject(car);
+                    servHistory.Clear();
+                    extrasList.Clear();
+                    MessageBox.Show("Car Successfully Added");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Please check all fields are filled in correctly");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please choose a value for extras");
+            }
         }
 
         private void btnAddService_Click(object sender, EventArgs e)
         {
 
-            int Miles = Convert.ToInt32(txtMilesServicedAt.Text);
-            string Garage = txtGarage.Text;
+            string Miles = txtServicedMiles.Text;
+            string Garage = txtServiceGarage.Text;
             DateTime Date = Convert.ToDateTime(dtpServiceDate.Text);
 
             servHistory.Add(new ServiceHistory(Garage,Miles,Date));
@@ -76,7 +110,5 @@ namespace CouchDBCA
             txtMilesServicedAt.Text = "";
             dtpServiceDate.ResetText();
         }
-
-        
     }
 }

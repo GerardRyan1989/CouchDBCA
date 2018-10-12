@@ -13,10 +13,17 @@ namespace DataLayer
 
        public async void postObject(Car car)
        {
-            using (var db = new MyCouchClient("http://localhost:5984", "cars"))
+            try
             {
-                var response = await db.Entities.PostAsync(car);
+                using (var db = new MyCouchClient("http://localhost:5984", "cars"))
+                {
+                    var response = await db.Entities.PostAsync(car);
+                }
             }
+            catch(Exception ex){
+               
+            }
+           
         }
     }
 

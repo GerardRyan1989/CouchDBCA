@@ -46,35 +46,35 @@
             this.searchByMakeToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(1158, 42);
+            this.menuStrip2.Size = new System.Drawing.Size(1158, 40);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
             // 
             // addCarToolStripMenuItem
             // 
             this.addCarToolStripMenuItem.Name = "addCarToolStripMenuItem";
-            this.addCarToolStripMenuItem.Size = new System.Drawing.Size(112, 38);
+            this.addCarToolStripMenuItem.Size = new System.Drawing.Size(112, 36);
             this.addCarToolStripMenuItem.Text = "Add Car";
             this.addCarToolStripMenuItem.Click += new System.EventHandler(this.addCarToolStripMenuItem_Click);
             // 
             // removeCarToolStripMenuItem
             // 
             this.removeCarToolStripMenuItem.Name = "removeCarToolStripMenuItem";
-            this.removeCarToolStripMenuItem.Size = new System.Drawing.Size(155, 38);
+            this.removeCarToolStripMenuItem.Size = new System.Drawing.Size(155, 36);
             this.removeCarToolStripMenuItem.Text = "Remove Car";
             this.removeCarToolStripMenuItem.Click += new System.EventHandler(this.removeCarToolStripMenuItem_Click);
             // 
             // updateCarToolStripMenuItem
             // 
             this.updateCarToolStripMenuItem.Name = "updateCarToolStripMenuItem";
-            this.updateCarToolStripMenuItem.Size = new System.Drawing.Size(146, 38);
+            this.updateCarToolStripMenuItem.Size = new System.Drawing.Size(146, 36);
             this.updateCarToolStripMenuItem.Text = "Update Car";
             this.updateCarToolStripMenuItem.Click += new System.EventHandler(this.updateCarToolStripMenuItem_Click);
             // 
             // searchByMakeToolStripMenuItem
             // 
             this.searchByMakeToolStripMenuItem.Name = "searchByMakeToolStripMenuItem";
-            this.searchByMakeToolStripMenuItem.Size = new System.Drawing.Size(197, 38);
+            this.searchByMakeToolStripMenuItem.Size = new System.Drawing.Size(197, 36);
             this.searchByMakeToolStripMenuItem.Text = "Search By Make";
             this.searchByMakeToolStripMenuItem.Click += new System.EventHandler(this.searchByMakeToolStripMenuItem_Click);
             // 
