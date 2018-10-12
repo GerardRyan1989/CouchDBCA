@@ -53,21 +53,21 @@
             // addCarToolStripMenuItem
             // 
             this.addCarToolStripMenuItem.Name = "addCarToolStripMenuItem";
-            this.addCarToolStripMenuItem.Size = new System.Drawing.Size(112, 36);
+            this.addCarToolStripMenuItem.Size = new System.Drawing.Size(112, 38);
             this.addCarToolStripMenuItem.Text = "Add Car";
             this.addCarToolStripMenuItem.Click += new System.EventHandler(this.addCarToolStripMenuItem_Click);
             // 
             // removeCarToolStripMenuItem
             // 
             this.removeCarToolStripMenuItem.Name = "removeCarToolStripMenuItem";
-            this.removeCarToolStripMenuItem.Size = new System.Drawing.Size(155, 36);
+            this.removeCarToolStripMenuItem.Size = new System.Drawing.Size(155, 38);
             this.removeCarToolStripMenuItem.Text = "Remove Car";
             this.removeCarToolStripMenuItem.Click += new System.EventHandler(this.removeCarToolStripMenuItem_Click);
             // 
             // updateCarToolStripMenuItem
             // 
             this.updateCarToolStripMenuItem.Name = "updateCarToolStripMenuItem";
-            this.updateCarToolStripMenuItem.Size = new System.Drawing.Size(146, 36);
+            this.updateCarToolStripMenuItem.Size = new System.Drawing.Size(146, 38);
             this.updateCarToolStripMenuItem.Text = "Update Car";
             this.updateCarToolStripMenuItem.Click += new System.EventHandler(this.updateCarToolStripMenuItem_Click);
             // 
@@ -82,7 +82,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Beige;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1158, 841);
             this.Controls.Add(this.menuStrip2);
