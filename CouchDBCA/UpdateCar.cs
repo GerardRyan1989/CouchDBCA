@@ -152,10 +152,10 @@ namespace CouchDBCA
                         Extras = extrasTempList,
                         Transmission = txtTransmission.Text.ToUpper(),
                         ServHistory = services,
-                        SafetyRating = Convert.ToInt16(txtSafetyRating.Text),
-                        numofOwners = Convert.ToInt16(txtNumOfOwners.Text),
-                        SalesPrices = Convert.ToInt16(txtSalesPrice.Text),
-                        mileage = Convert.ToInt16(txtMileage.Text),
+                        SafetyRating = Convert.ToInt32(txtSafetyRating.Text),
+                        numofOwners = Convert.ToInt32(txtNumOfOwners.Text),
+                        SalesPrices = Convert.ToInt32(txtSalesPrice.Text),
+                        mileage = Convert.ToInt32(txtMileage.Text),
 
                         PrevOwner = new PreviousOwners
                         {
