@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtModel = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtMake = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtModel = new System.Windows.Forms.TextBox();
+            this.dataGrid = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -50,6 +52,24 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Search By Make";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(106, 134);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(156, 31);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Car Model:";
+            // 
+            // txtModel
+            // 
+            this.txtModel.Location = new System.Drawing.Point(277, 134);
+            this.txtModel.Multiline = true;
+            this.txtModel.Name = "txtModel";
+            this.txtModel.Size = new System.Drawing.Size(299, 50);
+            this.txtModel.TabIndex = 23;
             // 
             // label1
             // 
@@ -79,36 +99,31 @@
             this.txtMake.Size = new System.Drawing.Size(299, 50);
             this.txtMake.TabIndex = 20;
             // 
-            // label2
+            // dataGrid
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(106, 134);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 31);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "Car Model:";
-            // 
-            // txtModel
-            // 
-            this.txtModel.Location = new System.Drawing.Point(277, 134);
-            this.txtModel.Multiline = true;
-            this.txtModel.Name = "txtModel";
-            this.txtModel.Size = new System.Drawing.Size(299, 50);
-            this.txtModel.TabIndex = 23;
-           
+            this.dataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGrid.BackgroundColor = System.Drawing.Color.Beige;
+            this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid.Location = new System.Drawing.Point(12, 341);
+            this.dataGrid.Name = "dataGrid";
+            this.dataGrid.RowTemplate.Height = 33;
+            this.dataGrid.Size = new System.Drawing.Size(2504, 598);
+            this.dataGrid.TabIndex = 1;
             // 
             // MapReduce
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(1569, 993);
+            this.ClientSize = new System.Drawing.Size(2528, 993);
+            this.Controls.Add(this.dataGrid);
             this.Controls.Add(this.groupBox1);
             this.Name = "MapReduce";
+            this.ShowIcon = false;
             this.Text = "MapReduce";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -121,5 +136,6 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtModel;
+        private System.Windows.Forms.DataGridView dataGrid;
     }
 }

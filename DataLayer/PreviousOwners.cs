@@ -17,5 +17,11 @@ namespace DataLayer
 
         [JsonProperty("yearsOwned")]
         public int YearsOwned { get; set; }
+
+        override
+        public string ToString()
+        {
+            return "Name: " + Name + " Address: " + Address + " Years Owned: " + YearsOwned;
+        }
     }
 }

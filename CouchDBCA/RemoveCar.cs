@@ -23,8 +23,7 @@ namespace CouchDBCA
 
         private void btnRemoveCar_Click(object sender, EventArgs e)
         {
-            RestClientDelete restDelete = new RestClientDelete();
-           
+            RestClientDelete restDelete = new RestClientDelete();     
             restDelete.DeleteObject(returnedCar._id, returnedCar._rev);
 
         }
@@ -32,9 +31,7 @@ namespace CouchDBCA
         private async void btnSearch_Click(object sender, EventArgs e)
         {
             RestClientGet restGet = new RestClientGet();
-
             returnedCar = await restGet.GetObject(txtReg.Text);
-
 
             txtRegistration.Text = returnedCar._id.ToString();
             txtMake.Text = returnedCar.Make;
@@ -50,12 +47,7 @@ namespace CouchDBCA
             txtYearsOwned.Text = returnedCar.PrevOwner.YearsOwned.ToString();
             txtTransmission.Text = returnedCar.Transmission;
             txtSafetyRating.Text = returnedCar.SafetyRating.ToString();
-
-
-
-
-           
-           
+       
         }
     }
 }

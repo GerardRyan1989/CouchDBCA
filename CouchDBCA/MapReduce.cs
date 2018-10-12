@@ -16,6 +16,7 @@ namespace CouchDBCA
         public MapReduce()
         {
             InitializeComponent();
+            this.Size = new Size(1500, 820);
         }
 
         private async void btnSearch_Click(object sender, EventArgs e)
@@ -23,7 +24,16 @@ namespace CouchDBCA
             RestClientView view = new RestClientView();
             string make = txtMake.Text;
             string model = txtModel.Text;
-            await view.getView(make,model);
+            List<Car> cars = new List<Car>();
+ 
+            var returnedCars = await view.getView(make,model);
+
+            foreach(Car car in returnedCars){
+                cars.Add(car);
+            }
+
+            dataGrid.DataSource = cars;
+            dataGrid.AutoResizeColumns();
         }   
     }
 }

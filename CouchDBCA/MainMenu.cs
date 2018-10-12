@@ -15,28 +15,24 @@ namespace CouchDBCA
         private void updateCarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UpdateCar updateCar = new UpdateCar();
-
             updateCar.Visible = true;
         }
 
         private void removeCarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RemoveCar removeCar = new RemoveCar();
-
             removeCar.Visible = true;
         }
 
         private void addCarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddCar addCar = new AddCar();
-
             addCar.Visible = true;
         }
 
         private void searchByMakeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MapReduce map = new MapReduce();
-
             map.Visible = true;
         }
     }
