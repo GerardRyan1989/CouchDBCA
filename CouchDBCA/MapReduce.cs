@@ -16,14 +16,14 @@ namespace CouchDBCA
         public MapReduce()
         {
             InitializeComponent();
-            this.Size = new Size(1500, 820);
+            this.Size = new Size(1300, 750);
         }
 
         private async void btnSearch_Click(object sender, EventArgs e)
         {
             RestClientView view = new RestClientView();
-            string make = txtMake.Text;
-            string model = txtModel.Text;
+            string make = txtMake.Text.ToUpper();
+            string model = txtModel.Text.ToUpper();
             List<Car> cars = new List<Car>();
  
 
@@ -54,6 +54,11 @@ namespace CouchDBCA
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MapReduce_Load(object sender, EventArgs e)
         {
 
         }

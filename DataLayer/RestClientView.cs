@@ -71,7 +71,6 @@ namespace DataLayer
                 }
 
                 var result = map;
-
                 return result;
             }
         }

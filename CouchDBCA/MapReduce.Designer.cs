@@ -203,6 +203,7 @@
             this.Name = "MapReduce";
             this.ShowIcon = false;
             this.Text = "MapReduce";
+            this.Load += new System.EventHandler(this.MapReduce_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
