@@ -29,6 +29,8 @@ namespace CouchDBCA
 
             var returnedCars = await view.getView(make,model);
 
+            var returnedMapReduce = await view.GetViewReduced(make, model);
+
             if(returnedCars.Count > 0)
             {
                 foreach (Car car in returnedCars)
@@ -38,12 +40,22 @@ namespace CouchDBCA
 
                 dataGrid.DataSource = cars;
                 dataGrid.AutoResizeColumns();
+
+                var keys = (object[])returnedMapReduce.key;
+                txtMake2.Text = keys[0].ToString();
+                txtModel2.Text = keys[1].ToString();
+                txtNumOfCars.Text = returnedMapReduce.value.ToString();
             }
             else
             {
                 MessageBox.Show("No matching cars could be found!");
             }
            
-        }   
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

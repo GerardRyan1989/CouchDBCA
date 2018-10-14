@@ -36,10 +36,44 @@ namespace DataLayer
                 var result = cars;
 
                 return result;
-            }
-
-            
+            }          
         }
-       
+
+
+
+        public async Task<MapReduceEntity> GetViewReduced(string make, string model)
+        {
+            string[] keys = new string[2];
+        
+            keys[0] = make;
+            keys[1] = model;
+            ViewQueryResponse<int> response;
+            MapReduceEntity map = new MapReduceEntity();
+
+
+            using (var db = new MyCouchClient("http://localhost:5984", "cars"))
+            {
+                var query = new QueryViewRequest("carViews", "byMake").Configure(querie => querie.Keys<string[]>(keys).Group(true)
+               .Reduce(true));
+        
+                response = await db.Views.QueryAsync<int>(query);
+
+                for (int i = 0; i < response.RowCount; i++)
+                {
+                    map = new MapReduceEntity
+                    {
+                        id = response.Rows[i].Id,
+                        IncludedDoc = response.Rows[i].IncludedDoc,
+                        key = response.Rows[i].Key,
+                        value = response.Rows[i].Value,
+                    };
+                    
+                }
+
+                var result = map;
+
+                return result;
+            }
+        }
     }
 }

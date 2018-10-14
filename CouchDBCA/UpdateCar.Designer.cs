@@ -399,6 +399,7 @@
             this.txtRegistration.Location = new System.Drawing.Point(280, 50);
             this.txtRegistration.Multiline = true;
             this.txtRegistration.Name = "txtRegistration";
+            this.txtRegistration.ReadOnly = true;
             this.txtRegistration.Size = new System.Drawing.Size(398, 50);
             this.txtRegistration.TabIndex = 0;
             // 
