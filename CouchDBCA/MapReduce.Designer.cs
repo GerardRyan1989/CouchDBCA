@@ -36,12 +36,12 @@
             this.txtMake = new System.Windows.Forms.TextBox();
             this.dataGrid = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtModel2 = new System.Windows.Forms.TextBox();
-            this.txtNumOfCars = new System.Windows.Forms.TextBox();
             this.txtMake2 = new System.Windows.Forms.TextBox();
+            this.txtNumOfCars = new System.Windows.Forms.TextBox();
+            this.txtModel2 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -64,10 +64,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(98, 144);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 31);
+            this.label2.Size = new System.Drawing.Size(146, 31);
             this.label2.TabIndex = 24;
             this.label2.Text = "Car Model:";
             // 
@@ -82,10 +82,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(106, 56);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 31);
+            this.label1.Size = new System.Drawing.Size(139, 31);
             this.label1.TabIndex = 22;
             this.label1.Text = "Car Make:";
             // 
@@ -133,45 +133,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "MapReduce";
             // 
-            // label3
+            // txtMake2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(54, 201);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(186, 31);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "Num of Cars:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(84, 124);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(156, 31);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "Car Model:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(92, 46);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(148, 31);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "Car Make:";
-            // 
-            // txtModel2
-            // 
-            this.txtModel2.Location = new System.Drawing.Point(272, 121);
-            this.txtModel2.Multiline = true;
-            this.txtModel2.Name = "txtModel2";
-            this.txtModel2.ReadOnly = true;
-            this.txtModel2.Size = new System.Drawing.Size(299, 50);
-            this.txtModel2.TabIndex = 26;
+            this.txtMake2.Location = new System.Drawing.Point(272, 46);
+            this.txtMake2.Multiline = true;
+            this.txtMake2.Name = "txtMake2";
+            this.txtMake2.ReadOnly = true;
+            this.txtMake2.Size = new System.Drawing.Size(299, 50);
+            this.txtMake2.TabIndex = 28;
             // 
             // txtNumOfCars
             // 
@@ -182,14 +151,45 @@
             this.txtNumOfCars.Size = new System.Drawing.Size(299, 50);
             this.txtNumOfCars.TabIndex = 27;
             // 
-            // txtMake2
+            // txtModel2
             // 
-            this.txtMake2.Location = new System.Drawing.Point(272, 46);
-            this.txtMake2.Multiline = true;
-            this.txtMake2.Name = "txtMake2";
-            this.txtMake2.ReadOnly = true;
-            this.txtMake2.Size = new System.Drawing.Size(299, 50);
-            this.txtMake2.TabIndex = 28;
+            this.txtModel2.Location = new System.Drawing.Point(272, 121);
+            this.txtModel2.Multiline = true;
+            this.txtModel2.Name = "txtModel2";
+            this.txtModel2.ReadOnly = true;
+            this.txtModel2.Size = new System.Drawing.Size(299, 50);
+            this.txtModel2.TabIndex = 26;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(92, 46);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(139, 31);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "Car Make:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(84, 124);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(146, 31);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Car Model:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(54, 201);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(174, 31);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Num of Cars:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // MapReduce
             // 
