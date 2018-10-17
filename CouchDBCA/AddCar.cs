@@ -16,7 +16,7 @@ namespace CouchDBCA
             InitializeComponent();
             this.Size = new Size(900, 700);
             cboExtras.Items.Add("Air Con, Leather Seats");
-            cboExtras.Items.Add("Air Con, Alloy wheels");
+            cboExtras.Items.Add("Air Con, Alloy Wheels");
             cboExtras.Items.Add("Air Con, Alloy Wheels, Leather Seats");
             cboExtras.Items.Add("Alloy Wheels");
             cboExtras.Items.Add("Leather Seats");
@@ -28,7 +28,7 @@ namespace CouchDBCA
             List<string> extrasList = new List<string>();
             Car car;
 
-            if (cboExtras.SelectedItem != null)
+            if (cboExtras.Text != "")
             {
                 switch (cboExtras.SelectedItem.ToString())
                 {
@@ -85,6 +85,25 @@ namespace CouchDBCA
                     servHistory.Clear();
                     extrasList.Clear();
                     MessageBox.Show("Car Successfully Added");
+
+
+           
+                    cboExtras.Text = "";
+                    txtRegistration.Text = "";
+                    txtMake.Text = "";
+                    txtModel.Text = "";
+                    txtEngineSize.Text = "";
+                    txtFuelType.Text = "";
+                    txtMileage.Text = "";
+                    txtNumOfOwners.Text = "";
+                    txtPreviousOwnerAddress.Text = "";
+                    txtPreviousOwnerName.Text = "";
+                    txtNumOfOwners.Text = "";
+                    txtYearsOwned.Text = "";
+                    txtTransmission.Text = "";
+                    txtSafetyRating.Text = "";
+                    txtSalesPrice.Text = "";
+            
                 }
                 catch (Exception ex)
                 {
@@ -109,6 +128,11 @@ namespace CouchDBCA
             txtGarage.Text = "";
             txtMilesServicedAt.Text = "";
             dtpServiceDate.ResetText();
+        }
+
+        private void AddCar_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

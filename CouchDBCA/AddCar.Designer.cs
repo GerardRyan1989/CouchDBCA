@@ -565,6 +565,7 @@
             this.Name = "AddCar";
             this.ShowIcon = false;
             this.Text = "Add Car";
+            this.Load += new System.EventHandler(this.AddCar_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

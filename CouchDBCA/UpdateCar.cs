@@ -17,7 +17,7 @@ namespace CouchDBCA
             InitializeComponent();
             this.Size = new Size(900, 850);
             cboExtras.Items.Add("Air Con, Leather Seats");
-            cboExtras.Items.Add("Air Con, Alloy wheels");
+            cboExtras.Items.Add("Air Con, Alloy Wheels");
             cboExtras.Items.Add("Air Con, Alloy Wheels, Leather Seats");
             cboExtras.Items.Add("Alloy Wheels");
             cboExtras.Items.Add("Leather Seats");
@@ -74,7 +74,7 @@ namespace CouchDBCA
                         case "Air Con, Leather Seats, ":
                             cboExtras.SelectedIndex = 0;
                             break;
-                        case "Air Con, Alloy wheels, ":
+                        case "Air Con, Alloy Wheels, ":
                             cboExtras.SelectedIndex = 1;
                             break;
                         case "Air Con, Alloy Wheels, Leather Seats, ":
@@ -111,7 +111,7 @@ namespace CouchDBCA
             List<string> extrasTempList = new List<string>();
             Car car;
 
-            if (cboExtras.SelectedItem != null)
+            if (cboExtras.Text != "")
             {
                 switch (cboExtras.SelectedItem.ToString())
                 {
@@ -168,6 +168,28 @@ namespace CouchDBCA
                     RestClientUpdate restUpdate = new RestClientUpdate();
                     restUpdate.ObjectUpdate(car);
                     MessageBox.Show("Car Updated Successfully");
+
+                    txtReg.Text = "";
+                    cboExtras.Text = "";
+                    txtRegistration.Text = "";
+                    txtMake.Text = "";
+                    txtModel.Text = "";
+                    txtEngineSize.Text = "";
+                    txtFuelType.Text = "";
+                    txtMileage.Text = "";
+                    txtNumOfOwners.Text = "";
+                    txtPreviousOwnerAddress.Text = "";
+                    txtPreviousOwnerName.Text = "";
+                    txtNumOfOwners.Text = "";
+                    txtYearsOwned.Text = "";
+                    txtTransmission.Text = "";
+                    txtSafetyRating.Text = "";
+                    txtSalesPrice.Text = "";
+                    
+                    dataGridService.DataSource = null;
+                    dataGridService.Refresh();
+
+
                 }
                 catch (Exception ex)
                 {

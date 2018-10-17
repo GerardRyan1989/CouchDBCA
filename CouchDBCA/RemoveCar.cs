@@ -26,6 +26,25 @@ namespace CouchDBCA
             RestClientDelete restDelete = new RestClientDelete();     
             restDelete.DeleteObject(returnedCar._id, returnedCar._rev);
             MessageBox.Show("Car Removed Successfully!");
+
+            txtReg.Text = "";
+            cboExtras.Text = "";
+            txtRegistration.Text = "";
+            txtMake.Text = "";
+            txtModel.Text = "";
+            txtEngineSize.Text = "";
+            txtFuelType.Text = "";
+            txtMileage.Text = "";
+            txtNumOfOwners.Text = "";
+            txtPreviousOwnerAddress.Text = "";
+            txtPreviousOwnerName.Text = "";
+            txtNumOfOwners.Text = "";
+            txtYearsOwned.Text = "";
+            txtTransmission.Text = "";
+            txtSafetyRating.Text = "";
+            txtSalesPrice.Text = "";
+            dataGridService.DataSource = null;
+            dataGridService.Refresh();
         }
 
         private async void btnSearch_Click_1(object sender, EventArgs e)
